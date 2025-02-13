@@ -6,7 +6,7 @@ exports.createThing = (req, res, next) => {
     ...req.body,
   });
   thing
-    .save()
+    Thing.create()
     .then(() => {
       res.status(201).json({
         message: "Post saved successfully!",
