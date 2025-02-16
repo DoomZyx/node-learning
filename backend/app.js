@@ -1,17 +1,9 @@
 const express = require("express");
 const bodyParser = require('body-parser')
-const mongoose = require("mongoose");
 const path = require("path");
 
 const stuffRoutes = require("./routes/stuff");
 const userRoutes = require("./routes/user");
-
-mongoose
-  .connect(
-    "mongodb+srv://DoomZy:Biloute0310!@cluster0.9ape7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-  )
-  .then(() => console.log("Connexion à MongoDB réussie !"))
-  .catch(() => console.log("Connexion à MongoDB échouée !"));
 
 const app = express();
 
